@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import PokeCard from "./components/PokeCard";
 
 export default function App() {
+  const statusBar = StatusBar.currentHeight;
+  const styles = StyleSheet.create({
+    container: {
+      backgroundColor: "#fff",
+      flexDirection: "row",
+      padding: 10,
+      marginTop: statusBar,
+    },
+    arrangeCard: {
+      marginBottom: 100,
+    },
+  });
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <ScrollView>
+        <PokeCard  />
+        <PokeCard  />
+        <PokeCard />
+      </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
