@@ -3,7 +3,7 @@ import React from "react";
 
 const AttackTip = ({ name, damage, level }) => {
   return (
-    <View style={styles.container}>
+    <View>
       <View
         style={[
           styles.toolTip,
@@ -20,25 +20,22 @@ const AttackTip = ({ name, damage, level }) => {
 export default AttackTip;
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: "flex-start",
-  },
   toolTip: {
     flexDirection: "row",
-    gap: 8,
-    paddingHorizontal: 12,
+    gap: 5,
+    paddingHorizontal: 10,
     paddingVertical: 6,
-    borderRadius: 12,
+    borderRadius: 15,
     borderWidth: 1,
-    borderColor: "#ccc",
+    borderColor: "#000",
     backgroundColor: "#f9f9f9",
     elevation: 3,
   },
   heavy: {
-    backgroundColor: "#ffd700", // gold
+    backgroundColor: "#ffd700",
   },
   light: {
-    backgroundColor: "#e0f7fa", // z
+    backgroundColor: "#fff",
   },
   attackName: {
     fontSize: 14,

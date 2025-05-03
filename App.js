@@ -17,8 +17,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <PokeCard  />
-        <PokeCard  />
+        <PokeCard />
+        <PokeCard />
         <PokeCard />
       </ScrollView>
     </View>
